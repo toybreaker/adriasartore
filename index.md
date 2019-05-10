@@ -1,6 +1,6 @@
 ---
 layout: home_splash
-title: Paintings
+title: Adria Sartore
 description: #
 image: /assets/p/paintings/adria-sartore-may2019-poster.jpg
 caption:
