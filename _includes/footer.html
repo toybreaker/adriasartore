@@ -5,6 +5,29 @@
 
     <div class="menu menu_footer">
 
+      <div class="menu_products series" role="menu">
+
+        <h3 class="title uppercase bottom_padded--med">About</h3>
+
+          {% for item in site.about %}
+
+            {% if page.url contains item.url %}
+              {% unless item.publish == "notyet" %}
+              <a class="menu_item active" role="menuitem" title="{{ item.title }}" href="/{{ item.title | slugify }}">
+                <span class="">{{ item.title }}</span>
+              </a>
+              {% endunless %}
+            {% else %}
+              {% unless item.publish == "notyet" %}
+              <a class="menu_item " role="menuitem" title="{{ item.title }}" href="/{{ item.title | slugify }}">
+                <span class="page_title">{{ item.title }}</span>
+              </a>
+              {% endunless %}
+            {% endif %}
+
+          {% endfor %}
+
+      </div>
 
 
 
