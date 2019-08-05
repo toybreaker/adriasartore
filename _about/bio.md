@@ -98,7 +98,7 @@ image_align_bottom: #true or empty
 
 2008 **Now, Next, Shanghai Selection** – Beijing Art Now Gallery, Shanghai
 
-2007 **Option Within Realism ** – Jason McCoy inc., New York
+2007 **Option Within Realism** – Jason McCoy inc., New York
 
 2007 **Cornice International Art Fair** – Lipsum Gallery, Venice
 
