@@ -6,7 +6,7 @@
 
   {% include head.html %}
 
-  <body class="home {{page.title}}">
+  <body class="home {{ page.title | slugify }}">
 
     {% include svg/defs.html %}
 
@@ -22,34 +22,44 @@
 
         <div class="painting_group_list">
 
-          {% for post in site.posts %}
-            {% if post.show_in_home %}
-              {% unless post.publish %}
-              <div class="painting_link_box">
+            {% assign sorted_posts = site.posts | sort: "display_order" %}
 
-                <a class="painting_link" href="{{ post.url }}">
+            {% for post in sorted_posts  %}
 
-                  {% comment %}
-                  assign the page image and split at the extension dot
-                  {% endcomment %}
+              {% if post.display_order %}
+              {% if post.show_in_home %}
 
-                  {% assign f = post.image | split: '.' %}
+                  {% unless post.publish %}
+                  <div class="painting_link_box">
 
-                  <img class="painting_link_image" loading="lazy" src="{{ f[0] | relative_url }}{{ include.name }}-640.{{ f[1] }}"
-                       srcset="{{ f[0] | relative_url }}{{ include.name }}-640.{{ f[1] }} 640w,
-                               {{ f[0] | relative_url }}{{ include.name }}-880.{{ f[1] }} 880w,
-                               {{ f[0] | relative_url }}{{ include.name }}-1024.{{ f[1] }} 1024w,
-                               {{ f[0] | relative_url }}{{ include.name }}-1920.{{ f[1] }} 1920w"
-                       sizes="100vw" alt="{{ page.name }} - {{ page.subtitle }}" />
+                    <a class="painting_link" href="{{ post.url }}">
 
-                  <div class="painting_title"><strong>{{ post.title }}</strong>, {{ post.dimensions }} cm</div>
+                      {% comment %}
+                      assign the page image and split at the extension dot
+                      {% endcomment %}
 
-                </a>
+                      {% assign f = post.image | split: '.' %}
 
-              </div>
-              {% endunless %}
-            {% endif %}
-          {% endfor %}
+                      <img class="painting_link_image" loading="lazy" src="{{ f[0] | relative_url }}{{ include.name }}-640.{{ f[1] }}"
+                           srcset="{{ f[0] | relative_url }}{{ include.name }}-640.{{ f[1] }} 640w,
+                                   {{ f[0] | relative_url }}{{ include.name }}-880.{{ f[1] }} 880w,
+                                   {{ f[0] | relative_url }}{{ include.name }}-1024.{{ f[1] }} 1024w,
+                                   {{ f[0] | relative_url }}{{ include.name }}-1920.{{ f[1] }} 1920w"
+                           sizes="100vw" alt="{{ page.name }} - {{ page.subtitle }}" />
+
+                      <div class="painting_title"><strong>{{ post.title }}</strong>, {{ post.dimensions }} cm</div>
+
+                    </a>
+
+                  </div>
+                  {% endunless %}
+
+                {% endif %}
+                {% endif %}
+
+              {% endfor %}
+
+
 
         </div>
 
