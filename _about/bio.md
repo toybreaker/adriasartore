@@ -5,7 +5,8 @@ subtitle:
 description: "Adria Sartore Artist Biography"
 publish: # notyet or blank
 image: /assets/p/paintings/adria-sartore-may2019-poster.jpg
-image_align_bottom: #true or empty
+image_align_top:  #true or empty
+image_align_bottom:  #true or empty
 ---
 
 ## Education
