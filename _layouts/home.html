@@ -22,44 +22,32 @@
 
         <div class="painting_group_list">
 
-            {% assign sorted_posts = site.posts | sort: "display_order" %}
+            {% for image in site.data.paintings-home  %}
 
-            {% for post in sorted_posts  %}
-
-              {% if post.display_order %}
-              {% if post.show_in_home %}
-
-                  {% unless post.publish %}
                   <div class="painting_link_box">
 
-                    <a class="painting_link" href="{{ post.url }}">
+                    <a class="painting_link" href="/{{ image.file_name | replace:'adria-sartore-','' | replace:'.jpg','' }}">
 
                       {% comment %}
                       assign the page image and split at the extension dot
                       {% endcomment %}
 
-                      {% assign f = post.image | split: '.' %}
+                      {% assign f = image.file_name | split: '.' %}
 
-                      <img class="painting_link_image" loading="lazy" src="{{ f[0] | relative_url }}{{ include.name }}-640.{{ f[1] }}"
-                           srcset="{{ f[0] | relative_url }}{{ include.name }}-640.{{ f[1] }} 640w,
-                                   {{ f[0] | relative_url }}{{ include.name }}-880.{{ f[1] }} 880w,
-                                   {{ f[0] | relative_url }}{{ include.name }}-1024.{{ f[1] }} 1024w,
-                                   {{ f[0] | relative_url }}{{ include.name }}-1920.{{ f[1] }} 1920w"
-                           sizes="100vw" alt="{{ page.name }} - {{ page.subtitle }}" />
+                      <img class="painting_link_image" loading="lazy" src="/assets/p/paintings/{{ f[0] }}{{ include.name }}-640.{{ f[1] }}"
+                           srcset="/assets/p/paintings/{{ f[0] }}{{ include.name }}-640.{{ f[1] }} 640w,
+                                   /assets/p/paintings/{{ f[0] }}{{ include.name }}-880.{{ f[1] }} 880w,
+                                   /assets/p/paintings/{{ f[0] }}{{ include.name }}-1024.{{ f[1] }} 1024w,
+                                   /assets/p/paintings/{{ f[0] }}{{ include.name }}-1920.{{ f[1] }} 1920w"
+                           sizes="100vw" alt="{{ page.title }} - {{ page.subtitle }}" />
 
-                      <div class="painting_title"><strong>{{ post.title }}</strong>, {{ post.dimensions }} cm</div>
+                      <div class="painting_title"><strong>{{ image.title }}</strong>, {{ image.dimensions }} cm</div>
 
                     </a>
 
                   </div>
-                  {% endunless %}
-
-                {% endif %}
-                {% endif %}
 
               {% endfor %}
-
-
 
         </div>
 
