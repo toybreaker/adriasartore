@@ -41,7 +41,7 @@
                                    /assets/p/paintings/{{ f[0] }}{{ include.name }}-1920.{{ f[1] }} 1920w"
                            sizes="100vw" alt="{{ page.title }} - {{ page.subtitle }}" />
 
-                      <div class="painting_title"><strong>{{ image.title }}</strong>, {{ image.dimensions }} cm</div>
+                      <div class="painting_title"><strong>{{ image.title }}</strong>{% if image.dimensions %}, {{ image.dimensions }} cm{% endif %}</div>
 
                     </a>
 
