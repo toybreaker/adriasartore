@@ -28,10 +28,12 @@
 
           <div class="painting_grid bigger">
 
-            {% capture this_serie %}{{page.year}}{% endcapture %}
+            {% capture this_serie %}{{page.title}}{% endcapture %}
 
             {% for painting in site.posts %}
+              {% unless painting.publish %}
               {% if painting.year == this_serie %}
+
 
               <div class="painting_block">
                 <a class="painting_link" href="{{ painting.url }}" title="view: {{ painting.title }}" >
@@ -56,6 +58,7 @@
                 </a>
               </div>
               {% endif %}
+              {% endunless %}
             {% endfor %}
 
           </div>
