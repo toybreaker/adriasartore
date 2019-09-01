@@ -3,6 +3,9 @@
   height: calc(100vh - 40px);
   overflow: hidden;
   z-index: 1;
+  @include media( "screen", ">maxWidth") {
+    height: auto;
+  }
 }
 
 .hero_image {
@@ -23,17 +26,28 @@
     height: auto;
     min-height: calc(100vh - 40px);
   }
+  @include media( "screen", ">maxWidth") {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
 
   &.align_top {
     bottom: auto;
     top:  0;
     transform: translate(-50%,0);
+    @include media( "screen", ">maxWidth") {
+      transform: none;
+    }
   }
 
   &.align_bottom {
     bottom: 0;
     top: auto;
     transform: translate(-50%,0);
+    @include media( "screen", ">maxWidth") {
+      transform: none;
+    }
   }
 }
 
