@@ -27,7 +27,7 @@ image_align_bottom:  #true or empty
 
 ## Solo Exhibitions
 
-2019 UPCOMING November 7-10 **ART021 Shanghai International Art Fair**, with Beijing Art Now Gallery
+2019 UPCOMING November 7-10 **ART021 Shanghai Contemporary Art Fair**, with Beijing Art Now Gallery
 
 2019 **"Sweet dreams, Darling"** – Chen Gallery, Beijing
 
