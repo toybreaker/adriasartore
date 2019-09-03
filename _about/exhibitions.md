@@ -1,29 +1,13 @@
 ---
 layout: hero
-title: Bio
+title: Exhibitions
 subtitle:
-description: "Adria Sartore Artist Biography"
+description: "Adria Sartore Exhibitions"
 publish: # notyet or blank
 image: /assets/p/paintings/adria-sartore-may2019-poster.jpg
 image_align_top:  #true or empty
 image_align_bottom:  #true or empty
 ---
-
-## Education
-
-
-1995/96 Grant in Philosophy - University of Paris La Sorbonne IV,France
-
-1997 Degree in Philosophy with a thesis in Aesthetics - University of Genoa,Italy
-
-1990/2000 Academy of Fine Art of Brera - Milan,Italy
-
-
-
-## Awards
-
-2004 BP Portrait Award, National Portrait Gallery, London
-
 
 ## Solo Exhibitions
 
