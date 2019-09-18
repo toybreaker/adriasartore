@@ -38,10 +38,12 @@
           <span class="painting_data--content">{{ page.title }}</span>
          </div>
 
+        {% if page.dimensions %}
         <div class="painting_data painting_dimensions">
           <span class="painting_data--name">Dimensions</span>
           <span class="painting_data--content">{{ page.dimensions }} cm</span>
         </div>
+        {% endif %}
 
         <div class="painting_data painting_medium">
           <span class="painting_data--name">Medium</span>

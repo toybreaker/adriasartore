@@ -1,6 +1,6 @@
 ---
 layout: series
-title:  Ink
+title: Ink
 subtitle:
 description:
 publish: # notyet or blank

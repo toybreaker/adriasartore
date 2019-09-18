@@ -23,13 +23,17 @@ layout: default
              sizes="50vw" alt="{{ post.title }}, {{ post.medium }}">
 
         <div class="painting_data">
+          
           <div class=" painting_title">
             <span class="painting_data--content">{{ post.title }}</span>
            </div>
 
+          {% if post.dimensions %}
           <div class=" painting_dimensions">
             <span class="painting_data--content">{{ post.dimensions }} cm</span>
           </div>
+          {% endif %}
+
         </div>
 
       </a>
