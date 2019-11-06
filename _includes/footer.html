@@ -136,7 +136,7 @@
             <span>
               {% include svg/use.html id="icn--facebook" class="facebook" %}
             </span>
-            <span><span class="hide_on_phones">Follow {{site.short_title}} on&nbsp;</span>Facebook</span>
+            <span>Facebook: {{site.company.facebook_page | replace: "https://web.facebook.com/", "" }}</span>
           </a>
         </div>
         {% endif %}
@@ -147,10 +147,12 @@
             <span>
               {% include svg/use.html id="icn--instagram" class="instagram" %}
             </span>
-            <span><span class="hide_on_phones">Follow {{site.short_title}} on&nbsp;</span>Instagram</span>
+            <span>Instagram: {{site.company.instagram | replace: "https://www.instagram.com/", "" }}</span>
           </a>
         </div>
         {% endif %}
+
+
 
         {% if site.company.youtube %}
         <div class="footer_icon youtube">
