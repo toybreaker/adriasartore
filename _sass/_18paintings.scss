@@ -23,8 +23,8 @@
 
   > div {
     padding: .5rem;
-    border-radius: $border_radius;
-    border: 1px $grey solid;
+    //border-radius: $border_radius;
+    //border: 1px $grey solid;
   }
 
   .painting_link {
@@ -58,7 +58,7 @@
     .painting_data--content,
     .painting_data--name {
       display: table-cell!important;
-      padding-top: $vertical_rhythm--small;
+      //padding-top: $vertical_rhythm--small;
       padding-right: $vertical_rhythm!important;
     }
   }
