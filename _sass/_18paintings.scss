@@ -7,6 +7,9 @@
   display: block;
   margin-bottom: $vertical_rhythm;
   color: $grey--dark;
+  &:hover {
+    color: $title_hover_color;
+  }
 }
 
 .painting_title {
