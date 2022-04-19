@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
 
-gem 'html-proofer'
-
-# Jekyll
 gem "jekyll"
+gem 'html-proofer'
+gem "webrick", "~> 1.7"
+
 group :jekyll_plugins do
    gem 'jekyll-tagging'
    gem 'jekyll-sitemap'
