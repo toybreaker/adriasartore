@@ -7,10 +7,10 @@ $brand_color: white;
 $complement_brand_color: lighten(complement($brand_color), 30);
 $invert_brand_color: lighten(invert($brand_color), 30);
 
-$black: hsl(0,0,0);
-$grey: hsl(0,0,80%);
-$grey--light: hsl(0,0,90%);
-$grey--dark: hsl(0,0,65%);
+$black: hsl(0, 0%, 0%);
+$grey: hsl(0, 0%,80%);
+$grey--light: hsl(0,0%,90%);
+$grey--dark: hsl(0,0%,65%);
 $grey--darker: hsl(0,0,50%);
 $grey--darkest: hsl(0,0,35%);
 $grey--black: hsl(0,0,20%);
@@ -69,8 +69,8 @@ $mediaMaxWidth: 1260px;
 
 // fixed headings
 $heading1: 1.8rem;
-$heading2: $heading1/8*6;
-$heading3: $heading1/8*5;
+$heading2: calc($heading1/8*6);
+$heading3: calc($heading1/8*5);
 
 // responsive headings
 $header_responsive: 8vw;

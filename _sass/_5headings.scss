@@ -12,7 +12,7 @@ h6 {
     margin-bottom: $vertical_rhythm;
   }
   .boat_summary & {
-    margin-top: $vertical_rhythm/4;
+    margin-top: calc($vertical_rhythm/4);
   }
 }
 
